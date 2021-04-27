@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--Very-Light-Gray);
 }
 
@@ -31,7 +31,6 @@ header {
   margin-top: 5rem;
   text-align: center;
   color: var(--Very-Dark-Blue);
-  /* border: solid 2px green; */
 }
 header > p {
   font-weight: 400;
@@ -48,8 +47,6 @@ span {
   font-weight: 600;
 }
 main {
-  /* min-height: 70vh; */
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -120,24 +117,28 @@ a {
 }
 
 /* Responsive layout - makes a one column-layout instead of three-column layout */
-@media (max-width: 1160px) {
+@media (max-width: 1200px) {
+  header {
+    width: 450px;
+  }
   main {
     flex-direction: column;
-    margin-top: 20vw;
-  }
-  header {
-    width: 80vw;
-    margin-top: 220vw;
+    margin-top: 100px;
   }
   .card {
-    width: 85vw;
+    width: 340px;
+  }
+  .column {
+    margin-top: -2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    width: 340px;
   }
   h1,
   span {
     font-size: 6.5vw;
-  }
-
-  .column {
-    margin-top: -2.5rem;
   }
 }
